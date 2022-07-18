@@ -1,4 +1,7 @@
 # CHANGELOG
+## Changes 0.4.0 -> 0.5.0
+- cordova-plugin-zip dependency now points to a repository where the zip traversal issue is fixed
+
 
 ## Changes 0.3.2 -> 0.4.0
 - Added optional parameter to specific name to store downloaded file. Author: [hordesalik](https://github.com/hordesalik)
