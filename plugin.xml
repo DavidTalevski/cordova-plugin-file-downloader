@@ -9,8 +9,14 @@
 	<repo>https://github.com/mramonlopez/cordova-plugin-file-downloader.git</repo>
 	<issue>https://github.com/mramonlopez/cordova-plugin-file-downloader/issues</issue>
 	<dependency id="cordova-plugin-file" version=">=4.3.0" />
-	<dependency id="cordova-plugin-file-transfer" version=">=1.7.1" />
+	<!-- We have to target this specific commit to fix the whitelist issue -->
+	<dependency 
+		id="cordova-plugin-file-transfer" 
+		url="https://github.com/apache/cordova-plugin-file-transfer"
+		commit="2cdb0403a81821e144998c8d9a00d338d6ece3ee"
+	 	version=">=1.7.1" />
 	<dependency id="cordova-plugin-network-information" version=">=1.3.3" />
+	<!-- We have to target this repo to fix the zip traversal issue -->
 	<dependency id="cordova-plugin-zip"  url="https://github.com/DavidTalevski/cordova-plugin-zip" version=">=3.2.0" />
 	<dependency id="cordova-plugin-file-md5" version="~0.3.3" />
 
