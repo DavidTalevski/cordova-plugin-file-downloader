@@ -200,7 +200,7 @@ var Downloader = {
    */
   transferFile: function(fileObject) {
     //console.log("tranfserFile");
-    var filePath = Downloader.localFolder.toURL() + "/" + fileObject.name;
+    var filePath = Downloader.localFolder.nativeURL + "/" + fileObject.name;
     Downloader.transfer = new FileTransfer();
     Downloader.transfer.onprogress = function(progressEvent) {
       if (progressEvent.lengthComputable) {
@@ -223,7 +223,7 @@ var Downloader = {
    */
   //TODO: full fileEntry as param? not only fileName
   _unzip: function(fileName) {
-    var folderUrl = Downloader.localFolder.toURL();
+    var folderUrl = Downloader.localFolder.nativeURL;
     zip.unzip(folderUrl + "/" + fileName, folderUrl, function(code) {
       if (code == 0) {
         document.dispatchEvent(createEvent("DOWNLOADER_unzipSuccess", [fileName]));
