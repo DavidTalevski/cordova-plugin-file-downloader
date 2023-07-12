@@ -517,7 +517,7 @@ var Downloader = {
    * @param {Object} event
    */
   onDownloadError: function (event) {
-    if (Downloader.retry > 0) {
+    if (Downloader.retry > 0 && Downloader.fileObjectInProgress != null) {
       // console.log("onDownloadError, retry: " + Downloader.retry);
       Downloader.transferFile(Downloader.fileObjectInProgress);
       Downloader.retry--;
